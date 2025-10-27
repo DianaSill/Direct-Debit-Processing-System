@@ -1,5 +1,7 @@
 # Direct Debit Processing System - Portfolio Version
 
+**For the complete case study with detailed technical analysis, see [CASE_STUDY.md](CASE_STUDY.md)**
+
 ## Overview
 
 A serverless direct debit form processing system built from scratch for local government councils. This system replaced manual phone-based direct debit setup with 24/7 self-service capability, handling customer validation, third-party verification, and automated daily exports.
@@ -127,8 +129,6 @@ portfolio/
 - **Monitoring**: Comprehensive observability prevents issues before they impact users
 
 ---
-
-**For the complete case study with detailed technical analysis, see [CASE_STUDY.md](CASE_STUDY.md)**
 
 ## Contact
 
