@@ -1,0 +1,196 @@
+<!DOCTYPE HTML> 
+
+<html lang="en">
+
+<head>
+	<title>Council A : Direct Debit</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="" style="transition: top 1s ease; -webkit-transition: top 1s ease; -moz-transition: top 1s ease;">
+	<div id="wrapper">
+
+		<div id="mast" class="red box-shadow" role="banner">
+			<a href="#">
+				<img src="assets/council-logo.png" alt="Council A Logo" id="logo">
+			</a>
+			<div class="clear"></div>
+			<div class="hcontact"></div>
+		</div>
+
+		<div class="clear"></div>
+		<main id="main" class="box-shadow">
+			<div id="content" class="full">
+
+				<h1>Direct debit payment</h1>
+				<div id="mainForm">
+					<form>
+
+						<fieldset>
+							<legend>Before you start</legend>
+							<p>
+                                This form is only for customers who wish to pay by Direct Debit. 
+                                For debit card payments please use the <a>debit card payment form</a>.
+							</p>
+						</fieldset>
+
+						<fieldset>
+							<legend>Declaration</legend>
+                            
+                            <p class="declarationInfo">Do you confirm:
+                                <ul>
+                                    <li class="declarationInfo">• You are a named account holder and the sole person required by the bank to authorise to set up from this account.</li>
+                                    <li class="declarationInfo">• You have an email address.</li>
+                                </ul>
+                            </p>
+
+                            <p class="declarationInfo"> Do you agree to the following:
+                                <ul>
+                                    <li class="declarationInfo">• Council A will appear against the Direct Debit on your bank statement.</li>
+                                    <li class="declarationInfo">• You will be sent a confirmation email with all information within 3 working days.</li>
+                                    <li class="declarationInfo">• You will be notified of each payment 10 working days prior to it being debited from your account</li>
+                                </ul>
+                            </p>
+                            <p></p>
+                            
+                            <strong>How does the customer want to view the terms & conditions?</strong>
+                            <p></p>
+                            <label id="tncEmaillabel">
+                            <input type="radio" name="tnc_view" value="email" id="tncEmail" required>
+                            Email
+                            </label>
+
+                            <label id="tncReadoutlabel">
+                            <input type="radio" name="tnc_view" value="read_out" id="tncReadout">
+                            Read out to Customer
+                            </label>
+                            <p></p>
+                            
+                            <div id="tnc-section" style="display: none;">
+                                <p>
+                                    <strong>Introduction</strong>
+                                </p>
+                                <ol>
+                                    <li>In this document "we", "us" and "our" mean Council A and "you" means the person who has asked or
+                                        agreed to the direct debit service.</li>
+                                    <li>These are the terms and conditions of the agreement between us and you for the
+                                        provision of the sundry debt Direct Debit service.</li>
+                                    <li>The headings in this document are for ease of reading only and have no legal effect.
+                                    </li>
+                                </ol>
+                                <p>
+                                    <strong>What the paperless Direct Debit service covers</strong>
+                                </p>
+                                <ol>
+                                    <li>The Direct Debit arrangement will be in place until you choose to cancel it.</li>
+                                    <li>Payments will be notified to you within 10 working days of debit.</li>
+                                    <li>Payments made for services received must be made before the service can be provided
+                                        except where specific terms have been agreed with the service in question.</li>
+                                    <li>If you wish to leave the service at any time, please contact us.</li>
+                                </ol>
+                                <p>
+                                    <strong>Personal data</strong>
+                                </p>
+                                <ol>
+                                    <li>To provide the service to you we will hold and use personal information about you
+                                        (your "personal data").</li>
+                                    <li>By applying for the service, you give us permission to hold your personal data, to
+                                        share it with other people for the purpose of providing you with the service and
+                                        dealing with any problems.</li>
+                                    <li>We will hold and use your personal data in accordance with legal requirements, in
+                                        particular the Data Protection Act 1998 and the General Data Protection Regulation.
+                                    </li>
+                                </ol>
+                                <p>
+                                    <strong>Changes in terms and conditions</strong>
+                                </p>
+                                <ol>
+                                    <li>We may make minor changes in these terms and conditions, such as changes to contact
+                                        details, by publishing updated information on our website.</li>
+                                    <li>We cannot make other changes to these terms and conditions during the subscription
+                                        period to which they relate without your agreement unless the law requires us to;
+                                        however, we may publish new terms and conditions for new subscription periods. If
+                                        you choose to pay for the service for a new subscription period, the published terms
+                                        and conditions which relate to that subscription period will apply.</li>
+                                </ol>
+                            </div>
+							<p>
+								<label class="agree-tc">
+									<input type="checkbox" name="agree" value="yes"> User agreed to declarations and the terms and conditions.
+								</label>
+							</p>
+						</fieldset>
+
+						<fieldset class="user-details">
+							<legend>Please complete the following details</legend>
+
+							<label for="customer_number">Customer Number*</label>
+							<input type="text" id="customer_number" class="form-text mandatory" maxlength="11" pattern="[0-9]{11}" inputmode="numeric"/>
+							<p>Customer number is quoted on the payment request letter received.</p>
+							<div id="customer-number-error" style="color: red; font-size: 0.9em; display: none;">
+								Customer number must start with 1000 and be 11 digits long.
+							</div>
+
+							<div>
+								<label for="postcode">Postcode*</label>
+								<input type="text" id="postcode" name="postcode"
+									placeholder="Postcode of address owing the debt" required/>
+								<p></p>
+								<!-- Status message for success/failure -->
+								<div id="status-message" style="padding-bottom: 10px; font-weight: bold;"></div>
+							</div>
+
+							<div>
+								<label for="email">Email Address*</label>
+								<input type="email" id="email" name="email"
+									placeholder="Enter email address" required/>
+								<p>This is for advance notifications of payment dates & should be the email address of the person who will be paying the Direct Debit.</p>
+								<p>By providing your email address, you are opting out of written postal communications and agree to receive all future communications about your account, including invoices, balances, reminders and notices—electronically.</p>
+								<div id="email-error" style="color: red; font-size: 0.9em; display: none;">
+									Please enter a valid email address.
+								</div>
+							</div>
+
+							<!-- Spinner shown while validating -->
+							<div id="spinner" style="display: none; margin-top: 5px; color: #555;">
+								Checking...
+							</div>
+
+							<button class="submit-button" type="submit" name="commit" value="Submit Form"
+								tabindex="0">Proceed</button>
+						</fieldset>
+					</form>
+
+					<div class="contact">
+						<h4><a href="#">Contact the Council</a>
+						</h4>
+					</div>
+				</div>
+				<div class="clear"></div>
+		</main>
+
+		<div class="clear"></div>
+
+		<footer id="footer" class="box-shadow" role="contentinfo">
+			<ul id="smallprint">
+				<li>&copy; 2025 Council A</li>
+			</ul>
+			<div id="social">
+				<h4 class="follow-socials">Follow us on</h4>
+				<ul id="networks" role="navigation" aria-label="Social Media Links">
+					<li><a href="#" title="View our Facebook page">Facebook</a></li>
+					<li><a href="#" title="View our Twitter feed">Twitter</a></li>
+					<li><a href="#" title="View our LinkedIn page">LinkedIn</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</footer>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
