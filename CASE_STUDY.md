@@ -268,3 +268,12 @@ The implementation demonstrates expertise in:
 - **Automation**: Event-driven processing and monitoring
 
 The system now processes over 200,000 customer records daily with sub-second response times, providing a robust foundation for future growth and enhancement.
+
+---
+
+**Project Duration**: 3 months  
+**Team Size**: 1 developer, senior overseeing, 1 PM, 1 BA, finance manager and testing team of 6
+**Technologies**:  Node.js, AWS Lambda, Amazon RDS MySQL, DynamoDB, S3, API Gateway, Secrets Manager, CloudWatch
+**Development Tools**: Git version control, AWS CLI, AWS Console, VS Code  
+**Database Administration**: MySQL Workbench, query optimization, index tuning, connection pooling  
+**Status**: Production deployment successful
